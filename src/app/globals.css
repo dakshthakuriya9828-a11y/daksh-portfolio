@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #07080C;
+  --bg-surface: #0D0F17;
+  --card-bg: rgba(18, 21, 32, 0.72);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --gold-glow: rgba(245, 158, 11, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #07080C;
+  color: #F8FAFC;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: #07080C;
+  color: #F8FAFC;
+  overflow-x: hidden;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07080C;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #FDE68A;
+}
+
+/* Glassmorphism card surfaces */
+.glass-card {
+  background: rgba(14, 17, 26, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(18, 22, 35, 0.78);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6), 0 0 20px 0 rgba(245, 158, 11, 0.06);
+}
+
+.glass-card-gold {
+  background: rgba(18, 22, 35, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-gold:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(23, 28, 45, 0.85);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 25px 0 rgba(245, 158, 11, 0.15);
+}
+
+/* Subtle dot grid pattern */
+.bg-grid-subtle {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Athletic speed-lines pattern for roller skating showcase */
+.speed-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(245, 158, 11, 0.03),
+    rgba(245, 158, 11, 0.03) 12px,
+    transparent 12px,
+    transparent 24px
+  );
+}
+
+/* Hand annotation font */
+.font-hand {
+  font-family: var(--font-hand), 'Caveat', cursive;
+}
+
+/* Display font */
+.font-display {
+  font-family: var(--font-display), 'Space Grotesk', sans-serif;
+}
+
+/* Mono font */
+.font-mono {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+}
